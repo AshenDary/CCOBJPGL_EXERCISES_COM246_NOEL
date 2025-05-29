@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.HomeController">
+  <children>
+    <MenuBar VBox.vgrow="NEVER">
+      <menus>
+        <Menu mnemonicParsing="false" text="File">
+          <items>
+            <MenuItem mnemonicParsing="false" text="New" />
+            <MenuItem mnemonicParsing="false" text="Open…" />
+            <Menu mnemonicParsing="false" text="Open Recent" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Close" />
+            <MenuItem mnemonicParsing="false" text="Save" />
+            <MenuItem mnemonicParsing="false" text="Save As…" />
+            <MenuItem mnemonicParsing="false" text="Revert" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Preferences…" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Quit" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Edit">
+          <items>
+            <MenuItem mnemonicParsing="false" text="Undo" />
+            <MenuItem mnemonicParsing="false" text="Redo" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Cut" />
+            <MenuItem mnemonicParsing="false" text="Copy" />
+            <MenuItem mnemonicParsing="false" text="Paste" />
+            <MenuItem mnemonicParsing="false" text="Delete" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Select All" />
+            <MenuItem mnemonicParsing="false" text="Unselect All" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Help">
+          <items>
+            <MenuItem mnemonicParsing="false" text="About MyHelloApp" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="536.0" prefWidth="640.0" VBox.vgrow="ALWAYS">
+      <children>
+        <Label fx:id="homelabel" alignment="CENTER" layoutX="109.0" layoutY="6.0" prefHeight="40.0" prefWidth="66.0" style="&#10;" text="USER" textAlignment="CENTER" textFill="#111111" wrapText="false">
+          <font>
+            <Font size="20.0" />
+          </font>
+        </Label>
+            <Label alignment="CENTER" layoutX="14.0" layoutY="14.0" prefHeight="25.0" prefWidth="104.0" style="&#10;" text="Welcome," textAlignment="CENTER" textFill="#111111" wrapText="false">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="usernametextfield" layoutX="89.0" layoutY="79.0" />
+            <TextField fx:id="passwordtextfield" layoutX="89.0" layoutY="119.0" />
+            <Label layoutX="20.0" layoutY="83.0" text="username" />
+            <Label layoutX="19.0" layoutY="122.0" text="password" />
+            <Label layoutX="18.0" layoutY="164.0" text="status" />
+            <Button fx:id="btncreate" layoutX="48.0" layoutY="311.0" mnemonicParsing="false" onAction="#createuser" text="Create" />
+            <Button fx:id="btnupdate" layoutX="109.0" layoutY="311.0" mnemonicParsing="false" onAction="#updateuser" text="Update" />
+            <Button fx:id="btndelete" layoutX="172.0" layoutY="311.0" mnemonicParsing="false" onAction="#deleteuser" text="Delete" />
+            <TableView fx:id="mytable" layoutX="273.0" layoutY="60.0" prefHeight="218.0" prefWidth="329.0">
+              <columns>
+                <TableColumn fx:id="usernamecol" prefWidth="75.0" text="username" />
+                <TableColumn fx:id="passwordcol" prefWidth="87.66665649414062" text="password" />
+                  <TableColumn fx:id="accountcreatedcol" prefWidth="101.3333740234375" text="accountcreated" />
+                  <TableColumn fx:id="statuscol" prefWidth="63.6666259765625" text="status" />
+              </columns>
+            </TableView>
+            <ChoiceBox fx:id="statuschoicebox" layoutX="89.0" layoutY="160.0" prefWidth="150.0" />
+      </children>
+    </AnchorPane>
+  </children>
+</VBox>
